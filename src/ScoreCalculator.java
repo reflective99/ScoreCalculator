@@ -15,7 +15,7 @@ import java.util.TreeMap;
  * @author asim
  *
  */
-public class Bookbub {
+public class ScoreCalculator {
 	
 	// Map of Strings representing Genres to the Genre Objects
 	public static Map<String, Genre> allGenres = new HashMap<String, Genre>();

@@ -43,7 +43,7 @@ public class BookScore implements Comparable<BookScore>{
 	public void addKeywordToBookScore(Keyword keyword) {
 
 		// Get Genres that have the keyword
-		List<Genre> genresWithKeyword = Bookbub.myKeywordToGenreMap.get(keyword);
+		List<Genre> genresWithKeyword = ScoreCalculator.myKeywordToGenreMap.get(keyword);
 		//System.out.println();
 		//System.out.println("ADDING KEYWORD: " + keyword + " to book: " + this.myBookTitle);
 		//System.out.println();

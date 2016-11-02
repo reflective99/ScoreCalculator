@@ -84,7 +84,7 @@ public class BookReader {
 				BookScore bookScore = new BookScore(bookTitle);
 				
 				// Add the bookScore object to an ArrayList so that we can retrieve the information later
-				Bookbub.myBooks.add(bookScore);
+				ScoreCalculator.myBooks.add(bookScore);
 				
 				// Replace all non-alphanumeric characters and convert the string to lowerCase
 				// we leave in the -s because keywords could be made up of words like not-to-distant
@@ -94,7 +94,7 @@ public class BookReader {
 				// System.out.println(bookDescription);
 				
 				// Get the keywords read in from CSV files as a Set
-				Set<Keyword> keywordsSet = Bookbub.myKeywords;
+				Set<Keyword> keywordsSet = ScoreCalculator.myKeywords;
 				
 				for(Keyword keyword : keywordsSet) {
 					// Employ Boyer Moore String Search algorithm to detect which indexes does a single keyword occur at.
