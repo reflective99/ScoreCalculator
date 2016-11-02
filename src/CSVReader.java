@@ -59,23 +59,23 @@ public class CSVReader {
 					Keyword newKeyword = new Keyword(currValues[1]);
 					
 					// add this keyword to the Set of Keywords seen so far
-					Bookbub.myKeywords.add(newKeyword);
-					Bookbub.putStringKeywordMapping(newKeyword);
+					ScoreCalculator.myKeywords.add(newKeyword);
+					ScoreCalculator.putStringKeywordMapping(newKeyword);
 					
 					// Get the keyword score
 					int score = Integer.parseInt(currValues[2]);
 					
 					// add this keyword with its score to the specific genre it belongs to
 					
-					if(Bookbub.checkGenre(newGenre)) {
+					if(ScoreCalculator.checkGenre(newGenre)) {
 						// if the genre exists, add the keyword and its score to the genre
-						Bookbub.addKeywordToGenre(newKeyword, newGenre, score); 
+						ScoreCalculator.addKeywordToGenre(newKeyword, newGenre, score); 
 					} else {
 						
 						// if the genre doesn't exist, add the genre and then add the keyword and its score
 						// to that genre
-						Bookbub.addGenre(newGenre);
-						Bookbub.addKeywordToGenre(newKeyword, newGenre, score);
+						ScoreCalculator.addGenre(newGenre);
+						ScoreCalculator.addKeywordToGenre(newKeyword, newGenre, score);
 					}
 				}
 			}
